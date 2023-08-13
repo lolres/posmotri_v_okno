@@ -11,6 +11,8 @@ html {
 .page {
   inline-size: 1200px;
   block-size: 100%;
+  display: flex;
+  flex-direction: column;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -35,4 +37,69 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 30px;
+  margin: auto;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  min-inline-size: 710px;
+  inline-size: 100%;
+}
+
+.result__video-container {
+  position: relative;
+  inline-size: 710px;
+  block-size: 385px;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.search-form {
+  display: flex;
+  column-gap: 40px;
+  justify-content: flex-start;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: 400px;
+  max-block-size: 534px;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  max-block-size: 298px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-description-container {
+  inline-size: 100%;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
 }
