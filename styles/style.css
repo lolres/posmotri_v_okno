@@ -100,7 +100,7 @@ ol {
   appearance: none;
   inline-size: 225px;
   background-color: transparent;
-  cursor: pointer;
+  cursor: text;
   padding: 4px 0;
   border-width: 1px 0;
   border-style: solid;
@@ -115,15 +115,33 @@ ol {
   font-weight: 400;
 }
 
-.search-form__checkbox-list {
-  display: flex;
-  column-gap: 15px;
+.search-form__textfield:active {
+  outline: 1px solid #fff;
+}
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__label {
   display: flex;
   column-gap: 5px;
+  inline-size: fit-content;
   cursor: pointer;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label:not(:first-child):hover {
+  text-decoration: underline;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  column-gap: 15px;
 }
 
 .search-form__pseudo-checkbox {
@@ -189,7 +207,7 @@ ol {
   row-gap: 26px;
   inline-size: 100%;
   block-size: 100%;
-  max-inline-size: 400px;
+  max-inline-size: 403px;
   min-block-size: 534px;
 }
 
@@ -214,11 +232,13 @@ ol {
   flex-direction: column;
   row-gap: 30px;
   max-block-size: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
 }
 
 .content__card-link {
+  display: block;
+  margin: 3px;
   text-decoration: none;
 }
 
@@ -229,11 +249,16 @@ ol {
   text-decoration-color: #fff;
 }
 
-.content__card-link:active {
+.content__card-link_current {
   background-color: #545050;
+
 }
 
 .content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
